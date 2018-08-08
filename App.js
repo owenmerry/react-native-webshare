@@ -6,22 +6,34 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
+          <View style={styles.menuAll}>
+              <Text style={styles.menuBtn}>Links</Text>
+              <Text style={styles.menuBtn}>Collections</Text>
+              <Text style={styles.menuBtn}>Account</Text>
+          </View>
         </View>
-        <View style={styles.body}>
-          <View style={styles.item}></View>
-          <View style={styles.itemDark}></View>
-          <View style={styles.itemDark}></View>
-          <View style={styles.item}></View>
-          <View style={styles.item}></View> 
-          <View style={styles.itemDark}></View>
-          <View style={styles.itemDark}></View>
-          <View style={styles.item}></View>
-          <View style={styles.item}></View>
-          <View style={styles.itemDark}></View>
-          <View style={styles.itemDark}></View>
-          <View style={styles.item}></View>
-        </View>
+        <ScrollView>
+          <View style={styles.body}>
+            <View style={styles.item}></View>
+            <View style={styles.itemDark}></View>
+            <View style={styles.itemDark}></View>
+            <View style={styles.item}></View>
+            <View style={styles.item}></View> 
+            <View style={styles.itemDark}></View>
+            <View style={styles.itemDark}></View>
+            <View style={styles.item}></View>
+            <View style={styles.item}></View>
+            <View style={styles.itemDark}></View>
+            <View style={styles.itemDark}></View>
+            <View style={styles.item}></View>
+          </View>
+        </ScrollView>
         <View style={styles.footer}>
+        <View style={styles.menuAll}>
+              <Text style={styles.menuBtn}>Links</Text>
+              <Text style={styles.menuBtn}>Collections</Text>
+              <Text style={styles.menuBtn}>Account</Text>
+          </View>
         </View>   
           
       </View> 
@@ -35,7 +47,7 @@ const styles = StyleSheet.create({
     flex:1
   },
   header:{
-    paddingTop:30,
+    paddingTop:40,
     backgroundColor: 'white',
     borderBottomColor: '#dcdcdc',
     borderBottomWidth: 1,
@@ -65,7 +77,19 @@ const styles = StyleSheet.create({
   footer:{
     backgroundColor: 'white',
     height:100,
+    paddingTop:10,
     borderTopColor: '#dcdcdc',
     borderTopWidth: 1,
-  }
+  },
+  menuAll:{
+    flexDirection:'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  menuBtn:{
+    flex:1,
+    fontSize:17,
+    padding:10,
+    textAlign:'center',
+  },
 });
